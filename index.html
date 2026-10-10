@@ -80,8 +80,9 @@
         let auth = null;
         let db = null;
         const APP_ID = typeof __app_id !== 'undefined' ? __app_id : 'jurnal-7-kaih-sd';
-        const GOOGLE_SHEET_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyQRPDvOyI8FVxzPtu5gO1q14e_0CliF6evP4mzik5oqcV9kgFJzyUgP_le7SyTAGde/exec
-";
+        
+        // URL Google Sheet Script yang baru diupdate
+        const GOOGLE_SHEET_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyQRPDvOyI8FVxzPtu5gO1q14e_0CliF6evP4mzik5oqcV9kgFJzyUgP_le7SyTAGde/exec";
 
         try {
             if (!firebase.apps.length) {
@@ -1261,7 +1262,7 @@
                             </div>
                         </div>
 
-                        {/* Role Segment Tabs - Updated Text & Classes */}
+                        {/* Role Segment Tabs */}
                         <div className="flex overflow-x-auto scrollbar-hide gap-1 bg-slate-100 p-1 rounded-xl mb-5 text-[11px] sm:text-xs font-semibold">
                             {[
                                 { key: 'student', label: 'Siswa' },
@@ -1368,7 +1369,7 @@
                                         type="password"
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
-                                        placeholder="Masukkan password guru"
+                                        placeholder="Masukkan password"
                                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs font-medium outline-none focus:border-blue-500 focus:bg-white transition-all"
                                     />
                                 </div>
@@ -1384,9 +1385,6 @@
 
                         {role === 'principal' && (
                             <div className="space-y-3.5">
-                                <div className="bg-amber-50 border border-amber-200 p-2.5 rounded-xl text-[11px] text-amber-800">
-                                    Login pimpinan untuk memantau aktivitas jurnal dan seluruh rekapitulasi kelas di <b>{selectedSchool.name}</b>.
-                                </div>
                                 <div>
                                     <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">
                                         Username Kepala Sekolah
@@ -1423,9 +1421,6 @@
 
                         {role === 'supervisor' && (
                             <div className="space-y-3.5">
-                                <div className="bg-indigo-50 border border-indigo-200 p-2.5 rounded-xl text-[11px] text-indigo-800">
-                                    Login pengawas untuk memantau, memvalidasi, dan memberi catatan pada laporan seluruh sekolah.
-                                </div>
                                 <div>
                                     <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">
                                         Username Pengawas
